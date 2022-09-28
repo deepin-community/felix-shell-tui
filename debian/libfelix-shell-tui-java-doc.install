@@ -1,0 +1,2 @@
+doc/apache-* /usr/share/doc/libfelix-shell-tui-java/
+target/apidocs/* usr/share/doc/libfelix-shell-tui-java/api/

@@ -1,0 +1,62 @@
+Source: felix-shell-tui
+Section: java
+Priority: optional
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Uploaders:
+ Damien Raude-Morvan <drazzib@debian.org>
+Build-Depends:
+ debhelper (>= 11),
+ default-jdk,
+ default-jdk-doc,
+ libfelix-shell-java,
+ libmaven-bundle-plugin-java,
+ libmaven-javadoc-plugin-java,
+ libosgi-core-java,
+ maven-debian-helper (>= 1.4)
+Standards-Version: 4.1.2
+Homepage: http://felix.apache.org/site/apache-felix-shell-tui.html
+Vcs-Git: https://anonscm.debian.org/git/pkg-java/felix-shell-tui.git
+Vcs-Browser: https://anonscm.debian.org/git/pkg-java/felix-shell-tui.git
+
+Package: libfelix-shell-tui-java
+Architecture: all
+Depends:
+ ${maven:Depends},
+ ${misc:Depends}
+Recommends:
+ ${maven:OptionalDepends}
+Suggests:
+ libfelix-shell-tui-java-doc
+Description: Apache Felix Shell TUI
+ The Felix project is an implementation
+ of the OSGi R4.2 core framework specification.
+ .
+ OSGi framework is a module system and service platform
+ for the Java programming language that implements
+ a complete and dynamic component model.
+ .
+ This subproject provide a simple command line interface
+ to act as a shell for Felix.
+
+Package: libfelix-shell-tui-java-doc
+Architecture: all
+Section: doc
+Depends:
+ ${maven:DocDepends},
+ ${misc:Depends}
+Recommends:
+ ${maven:DocOptionalDepends}
+Suggests:
+ libfelix-shell-tui-java
+Description: Documentation for Apache Felix Shell TUI
+ The Felix project is an implementation
+ of the OSGi R4.2 core framework specification.
+ .
+ OSGi framework is a module system and service platform
+ for the Java programming language that implements
+ a complete and dynamic component model.
+ .
+ This subproject provide a simple command line interface
+ to act as a shell for Felix.
+ .
+ This package contains the API documentation of libfelix-shell-tui-java.
